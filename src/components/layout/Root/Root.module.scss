@@ -1,0 +1,20 @@
+@import '../../../scssVariables/colors';
+@import '../../../scssVariables/fontSizes';
+
+.app {
+	height: 940px;
+}
+
+.headBlock {
+	width: 100%;
+	height: 50px;
+	background: $primaryBackgroundColor;
+	box-shadow: 0px 2px 10px 0px rgba(22, 23, 24, 0.08);
+	margin-bottom: 30px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 366px 744px;
+	gap: 30px;
+}

@@ -1,0 +1,36 @@
+.MoreButton{
+    border: none;
+    cursor: pointer;
+    background: none;
+    position: relative;
+}
+
+.options{
+    background: #fff;
+    width: 230px;
+    transform: scale(0);
+    transition: .3s;
+    position: absolute;
+    left: -230px;
+    padding: 8px 0;
+    border-radius: 4px;
+    filter: drop-shadow(0px 2px 16px rgba(34, 34, 34, 0.16));
+
+    &.active{
+        transform: scale(1);
+    }
+
+    button{
+        width: 100%;
+        padding: 10px 20px;
+        text-align: left;
+        border-radius: 4px;
+        background: #fff;
+        border: none;
+
+        &:hover{
+            background: #F1F2F3;
+            cursor: pointer;
+        }
+    }
+}

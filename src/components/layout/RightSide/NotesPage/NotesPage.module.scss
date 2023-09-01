@@ -1,0 +1,12 @@
+@import '../../../../scssVariables/colors';
+@import '../../../../scssVariables/fontSizes';
+
+.notes {
+	padding: 15px;
+	background: $primaryBackgroundColor;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border-radius: 4px;
+}

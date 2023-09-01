@@ -1,0 +1,86 @@
+@import '../../../scssVariables/colors';
+@import '../../../scssVariables/fontSizes';
+
+.searchBox {
+	background: $primaryBackgroundColor;
+	box-shadow: 0px 1px 4px 0px rgba(19, 19, 19, 0.1);
+	border-radius: 4px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 13px 10px;
+}
+
+.iconBox {
+	width: 34px;
+	height: 34px;
+	border-radius: 20px;
+	background: $secondaryBackgroundColor;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.filter {
+	display: flex;
+	gap: 10px;
+}
+
+.selectBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 10px;
+
+	button {
+		color: $secondaryTextColor;
+		text-align: right;
+		font-size: $mediumText;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+		outline: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	.buttonsBox {
+		display: flex;
+		gap: 15px;
+	}
+}
+
+.clientCount {
+	padding: 0px 4px;
+	border-radius: 9px;
+}
+
+.clientCount {
+	color: $lightTextColor;
+	text-align: center;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-size: $smallText;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 14px;
+}
+
+.clients {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+}
+
+.checkAll {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	p {
+		color:  $secondaryTextColor;
+		font-size: $mediumText;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+	}
+}
