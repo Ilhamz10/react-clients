@@ -28,10 +28,6 @@ const RightSide = () => {
 		(client) => client.id === Number(params?.id)
 	);
 
-	useEffect(() => {
-		navigate(`/${currentClient?.id}/notes`);
-	}, [currentClient?.id]);
-
 	function addNewNotehandler() {
 		if(dateInputRef.current?.value && textInputRef.current?.value)
 			clientCtx.addNewNote({date: dateInputRef.current?.value, id: Date.now(), text: textInputRef.current?.value}, currentClient?.id)
@@ -63,7 +59,7 @@ const RightSide = () => {
 								className={({ isActive }) =>
 									isActive ? styles.active : undefined
 								}
-								to={`/${currentClient?.id}/notes`}>
+								to={`/${currentClient?.id}`}>
 								Заметки
 							</NavLink>
 						</li>

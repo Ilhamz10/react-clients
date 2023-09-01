@@ -20,7 +20,7 @@ const router = createHashRouter([
 				path: '/:id',
 				element: <RightSide />,
 				children: [
-					{ path: '/:id/notes', element: <NotesPage /> },
+					{ path: '/:id', element: <NotesPage /> },
 					{ path: '/:id/consulting', element: <ConsultationPage /> },
 					{ path: '/:id/videos', element: <VideoPage /> },
 					{ path: '/:id/events', element: <EventPage /> },
