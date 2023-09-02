@@ -155,6 +155,14 @@ ul {
 }
 
 @media (max-width: 565px) {
+	.rightSideNavs{
+		padding: 20px 20px;
+		ul{
+			display: none;
+		}
+	}
+
+
 	.RightSide {
 		display: block;
 		position: fixed;

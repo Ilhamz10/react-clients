@@ -103,7 +103,7 @@ const RightSide = () => {
 								: 'Новая заметка'}
 						</p>
 						<div className={styles.iconBox}>
-							<Svg name='plus' />
+							<Svg name='plus' size={15} />
 						</div>
 					</button>
 					{modalShow && (
