@@ -4,12 +4,15 @@ import Svg from '../../UI/Svg/Svg';
 import ClientCard from '../../UI/ClientCard/ClientCard';
 import { clients } from '../../../json/clients';
 import { ClientContext } from '../../../store/client-context';
+import { useNavigate } from 'react-router-dom';
 
 const LeftSide = () => {
 	const clientCtx = useContext(ClientContext);
 	const [alowedToCheck, setAlowedToCheck] = useState(false);
 	const [selectedClientsCount, setSelectedClientsCount] = useState(0);
 	const [allClientsIsChecked, setAllClientsIsChecked] = useState(false);
+
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (allClientsIsChecked) {
@@ -29,18 +32,36 @@ const LeftSide = () => {
 		setAllClientsIsChecked((prevState) => !prevState);
 	}
 
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth < 1200 && window.innerWidth >= 565) {
+				navigate('/1');
+			} else if (window.innerWidth < 565) {
+				navigate('/');
+			}
+		};
+
+		handleResize();
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
 	return (
 		<div className={styles.LeftSide}>
 			<div className={styles.searchBox}>
 				<div className={styles.iconBox}>
-					<Svg name='search' />
+					<Svg name='search' size={20} />
 				</div>
 				<div className={styles.filter}>
 					<div className={styles.iconBox} onClick={clientCtx.sortClients}>
-						<Svg name='filter' />
+						<Svg name='filter' size={20} />
 					</div>
 					<div className={styles.iconBox}>
-						<Svg name='plus' />
+						<Svg name='plus' size={20} />
 					</div>
 				</div>
 			</div>

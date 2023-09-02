@@ -1,9 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {
-	Navigate,
-	RouterProvider,
-	createHashRouter,
-} from 'react-router-dom';
+import { Navigate, RouterProvider, createHashRouter } from 'react-router-dom';
 import RightSide from './components/layout/RightSide/RightSide';
 import Root from './components/layout/Root/Root';
 import NotesPage from './components/layout/RightSide/NotesPage/NotesPage';
@@ -26,33 +22,11 @@ const router = createHashRouter([
 					{ path: '/:id/events', element: <EventPage /> },
 				],
 			},
-			{ path: '/', element: <Navigate to={'/1'} /> },
 		],
 	},
 ]);
 
 function App() {
-	const [isHeld, setIsHeld] = useState(false);
-	const [active, setActive] = useState(false);
-	const timeoutRef = useRef<any>(null);
-
-	useEffect(() => {
-		timeoutRef.current = setTimeout(() => {
-			if (isHeld) {
-				setActive(true);
-			}
-		}, 1000);
-	}, [isHeld]);
-
-	function startHelding() {
-		setIsHeld(true);
-	}
-
-	function stopHelding() {
-		setIsHeld(false);
-		clearTimeout(timeoutRef.current);
-	}
-
 	return <RouterProvider router={router} />;
 }
 

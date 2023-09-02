@@ -2,9 +2,12 @@ import React, { cloneElement } from 'react';
 import { icons } from './icons';
 import { INameIcons } from '../../../types/Icons';
 
-const Svg: React.FC<{ name: INameIcons; size?: number; fill?: string }> = (props) => {
+const Svg: React.FC<{ name: INameIcons; size?: number; fill?: string }> = (
+	props
+) => {
 	return cloneElement(icons[props.name as INameIcons], {
-		size: props.size,
+		width: props.size,
+		height: props.size,
 		fill: props.fill,
 	});
 };

@@ -8,4 +8,5 @@ export type INameIcons =
 	| 'smallVideo'
 	| 'clock'
 	| 'calendar'
-	| 'dotes';
+	| 'dotes'
+	| 'back';

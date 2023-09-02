@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 
 import styles from './RightSide.module.scss';
 import {
+	Link,
 	NavLink,
 	Outlet,
 	useLocation,
-	useNavigate,
 	useParams,
 } from 'react-router-dom';
 import { ClientContext } from '../../../store/client-context';
@@ -19,7 +19,6 @@ const RightSide = () => {
 	const textInputRef = useRef<HTMLTextAreaElement>(null)
 	const dateInputRef = useRef<HTMLInputElement>(null)
 
-	const navigate = useNavigate();
 	const location = useLocation();
 	const clientCtx = useContext(ClientContext);
 	const params = useParams();
@@ -50,12 +49,16 @@ const RightSide = () => {
 						</p>
 					</div>
 				</div>
+				<Link className={styles.backBtn} to={'/'}>
+					<Svg name='back' size={30} fill='black'/>
+				</Link>
 			</div>
 			<div className={styles.rightSideHeads}>
 				<div className={styles.rightSideNavs}>
 					<ul>
 						<li>
 							<NavLink
+								end
 								className={({ isActive }) =>
 									isActive ? styles.active : undefined
 								}
@@ -93,11 +96,11 @@ const RightSide = () => {
 					</ul>
 					<button className={styles.eventBtn} onClick={() => setModalShow(true)}>
 						<p>
-							{location.pathname.includes('notes')
-								? 'Новая заметка'
+							{location.pathname.includes('videos') || location.pathname.includes('events')
+								? 'Рекомендовать'
 								: location.pathname.includes('consulting')
 								? 'Записать'
-								: 'Рекомендовать'}
+								: 'Новая заметка'}
 						</p>
 						<div className={styles.iconBox}>
 							<Svg name='plus' />
