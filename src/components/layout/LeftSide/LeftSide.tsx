@@ -7,6 +7,7 @@ import { ClientContext } from '../../../store/client-context';
 import { useNavigate } from 'react-router-dom';
 
 const LeftSide = () => {
+	const [navigation, setNavigation] = useState<string>('/1')
 	const clientCtx = useContext(ClientContext);
 	const [alowedToCheck, setAlowedToCheck] = useState(false);
 	const [selectedClientsCount, setSelectedClientsCount] = useState(0);
@@ -35,9 +36,9 @@ const LeftSide = () => {
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth < 1200 && window.innerWidth >= 565) {
-				navigate('/1');
+				setNavigation('/1')
 			} else if (window.innerWidth < 565) {
-				navigate('/');
+				setNavigation('/')
 			}
 		};
 
@@ -49,6 +50,10 @@ const LeftSide = () => {
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
+
+	useEffect(() => {
+		navigate(navigation)
+	}, [navigation])
 
 	return (
 		<div className={styles.LeftSide}>

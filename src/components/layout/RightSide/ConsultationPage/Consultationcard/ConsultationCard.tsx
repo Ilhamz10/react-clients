@@ -13,7 +13,7 @@ const ConsultationCard: React.FC<{
 	return (
 		<div style={props.borderColor ? {borderColor: props.borderColor} : {}} className={styles.ConsultationCard}>
 			<div className={styles[props.icon]}>
-				<Svg name={props.icon} />
+				<Svg name={props.icon} size={props.icon !== 'meeting' ? 40 : 16}/>
 			</div>
 			<div className='consultationContext'>
 				<p className={styles.name}>{props.name}</p>
