@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-clients/static/css/main.f088c4fd.css",
-    "main.js": "/react-clients/static/js/main.bf711ec1.js",
+    "main.css": "/react-clients/static/css/main.7b35a1a2.css",
+    "main.js": "/react-clients/static/js/main.ec592b8d.js",
     "static/media/note_Img1.png": "/react-clients/static/media/note_Img1.5b48c0b3e33f40245371.png",
     "static/media/event.png": "/react-clients/static/media/event.1490c1dc089789189a12.png",
     "static/media/client1.png": "/react-clients/static/media/client1.2ca0c94faca65567eca1.png",
@@ -10,11 +10,11 @@
     "static/media/video1.png": "/react-clients/static/media/video1.19a5cf5daecdc3110650.png",
     "static/media/client2.png": "/react-clients/static/media/client2.c65c0db0d0dc3b5908e0.png",
     "index.html": "/react-clients/index.html",
-    "main.f088c4fd.css.map": "/react-clients/static/css/main.f088c4fd.css.map",
-    "main.bf711ec1.js.map": "/react-clients/static/js/main.bf711ec1.js.map"
+    "main.7b35a1a2.css.map": "/react-clients/static/css/main.7b35a1a2.css.map",
+    "main.ec592b8d.js.map": "/react-clients/static/js/main.ec592b8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f088c4fd.css",
-    "static/js/main.bf711ec1.js"
+    "static/css/main.7b35a1a2.css",
+    "static/js/main.ec592b8d.js"
   ]
 }
