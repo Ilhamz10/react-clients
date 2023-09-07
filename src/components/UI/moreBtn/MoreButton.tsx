@@ -7,7 +7,7 @@ const MoreButton: React.FC<{onDelete: () => void, onChange: () => void}> = (prop
 
 	return (
 		<div className={styles.MoreButton} onClick={() => setOpen((prevState) => !prevState)}>
-			<Svg name='dotes' />
+			<Svg name='dotes' size={20}/>
 			<div className={`${styles.options} ${open && styles.active}`}>
 				<button onClick={props.onChange}>Изменить</button>
 				<button onClick={props.onDelete}>Удалить</button>

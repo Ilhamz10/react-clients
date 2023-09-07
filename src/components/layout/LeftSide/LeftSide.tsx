@@ -5,6 +5,7 @@ import ClientCard from '../../UI/ClientCard/ClientCard';
 import { clients } from '../../../json/clients';
 import { ClientContext } from '../../../store/client-context';
 import { useNavigate } from 'react-router-dom';
+import MoreButton from '../../UI/moreBtn/MoreButton';
 
 const LeftSide = () => {
 	const [navigation, setNavigation] = useState<string>('/1')
